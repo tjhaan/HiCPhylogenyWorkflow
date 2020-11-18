@@ -37,7 +37,7 @@ To run this protocol you will need the following programs:
 
 [FastTree](http://www.microbesonline.org/fasttree/)
 
-Along with the (identifyHMM)[https://github.com/edgraham/PhylogenomicsWorkflow/blob/master/identifyHMM] script which you can retrieve and make executable using the following commands:
+Along with the [identifyHMM](https://github.com/edgraham/PhylogenomicsWorkflow/blob/master/identifyHMM) script which you can retrieve and make executable using the following commands:
 ```
 $ cd ~/bin
 $ wget https://raw.githubusercontent.com/edgraham/PhylogenomicsWorkflow/master/identifyHMM
