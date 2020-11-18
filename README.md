@@ -3,8 +3,8 @@ This tutorial is an adaptation to the workflow described in
  **Graham, E. D., J. F. Heidelberg, and B. J. Tully. 'Potential for primary productivity in a globally-distributed bacterial phototroph.' The ISME journal (2018)**
  
 The procedure described below was used to build a phylogenetic tree using 16 ribosomal proteins described in [Hug et al. 2016](https://doi.org/10.1038/nmicrobiol.2016.48) of metagenomic-assembled genomes (MAGs) from soil samples produced using ProxiMeta Deconvolution against [RefSoil+](https://doi.org/10.1128/mSystems.00349-18) genomes, a database of 922 soil microorganisms from RefSeq, for phylogenetic context.
-In this repository you can run through the procedure using the example HiC MAGs fasta files and ribosomal protein calls from the RefSoil genomes present in the ref_soil folder to build a phylogenetic tree.
-If you run this with your own data, this proecedure requires you to have metagenomic-assembled genomes ready for analysis.
+In this repository you can run through the procedure using the example [HiC MAGs](HiCPhylogenyWorkflow/HiC_MAG/) fasta files and ribosomal protein calls from the RefSoil genomes present in the [ref_soil folder](HiCPhylogenyWorkflow/ref_soil/) to build a phylogenetic tree.
+*If you run this with your own data, this proecedure requires you to have metagenomic-assembled genomes ready for analysis.*
 
 To run through this example you will go through the following steps:
 
