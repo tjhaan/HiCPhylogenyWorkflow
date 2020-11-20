@@ -84,17 +84,17 @@ The outputs after running through this example will be 16 `.faa` files appended 
  
  Now that we have extracted marker genes from the HiC MAGs we can merge together the ribosomal protein calls we just made the MAGs with genomes from the RefSoil database in the folder '/HiCPhylogenyWorkflow/ref_soil'.
 
- To do this we will use a quick bash trick that uses the text file `marker_list.txt` which contains a list of the marker proteins we are searching for. Use the following Bash command:
+ To do this we will use a quick bash command that uses the text file `marker_list.txt` which contains a list of the marker proteins we are searching for. Use the following Bash command:
  
 ```
- while read p; do cat ../ref_soil/REF_"$p".faa HUG_"$p".faa > Dataset1_"$p".faa; done < ../marker_list.txt
+ while read p; do cat ../ref_soil/REF_"$p".faa HiC_"$p".faa > Dataset1_"$p".faa; done < ../marker_list.txt
 ``` 
-This bash script is iterating through the list given in `marker_list.txt` and concatenate appropriate reference and experimental protein sets. So for example it would concatenate `ExampleRefSet.RpL6.faa` and `Hug_RpL6.faa` into `Dataset1_RpL6.faa`. 
+This bash script is iterating through the list given in `marker_list.txt` and concatenate appropriate reference and experimental protein sets. So for example it would concatenate `REF.RpL6.faa` and `HiC_RpL6.faa` into `Dataset1_RpL6.faa`. 
 
 
 ## Step 4: Align your Proteins ##
 
-Now that we have 16 files containing Ribosomal proteins from our 5 unknown genomes and 100 references we can move on to aligning our proteins.
+Now that we have 16 files containing Ribosomal proteins from our 10 unknown HiC MAGs and RefSoil reference genomes we can move on to aligning our proteins.
 To align our proteins we can use muscle (You could also alternatively use [MAFFT](https://mafft.cbrc.jp/alignment/software/algorithms/algorithms.html) here):
 
 ```
@@ -105,7 +105,7 @@ We will use the same trick as above where we feed the list of ribosomal markers 
 
 ## Step 5: Trim your alignments ##
 
-Now that we have our alignments we need to trim those alignments. There are many programs that do this and I implore you to try a couple and see how different ones work, or even try manual trimming. Here we will use Trimal because its automated and works quickly when running alignments with lots of sequences.
+Now that we have our alignments we need to trim those alignments.  Here we will use Trimal because its automated and works quickly when running alignments with lots of sequences.
 
 You can run the following to trim your alignments:
 
@@ -117,7 +117,7 @@ Once your sequences are trimmed I advise manually inspecting the file to ensure 
 
 ## Step 6: Concatenate proteins ##
 
-Now that you have the trimmed and aligned sequences you can concatenate these 16 files. To do this we will use the `concat` script packaged with BinSanity. 
+Now that you have the trimmed and aligned sequences you can concatenate these 16 files for each ribosomal protein. To do this we will use the `concat` script packaged with BinSanity. 
 
 Usage is shown below:
 ```
