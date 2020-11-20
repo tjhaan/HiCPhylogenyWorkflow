@@ -159,4 +159,6 @@ FastTree -gamma -lg Dataset1.Ribosomal.trimmed.concat.aln > Dataset1.Ribosomal.t
 
 ## Step 8: View Tree ##
 
-Now you have a newick file which can be viewed in a variety of tree views and edited. One of my favorite tools for making publication quality trees is [ITOL](https://itol.embl.de/)!
+Now you have a newick file which can be viewed in a variety of tree views and edited.  The following are some tree viewing programs that can be used to visualize newick files:
+[iTol](https://itol.embl.de/)
+[FigTree](http://tree.bio.ed.ac.uk/software/figtree/)
